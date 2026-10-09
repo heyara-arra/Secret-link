@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#170719">
+
+    <title>A Little Story About Us ♡</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div id="sky" aria-hidden="true"></div>
+    <div id="floating-hearts" aria-hidden="true"></div>
+
+    <!-- Music Control -->
+    <button id="music-toggle" class="music-button" type="button">
+        ♫ Music: OFF
+    </button>
+
+    <main>
+
+        <!-- SCENE 1: OPENING -->
+        <section id="scene-1" class="scene active">
+
+            <div class="orb">♡</div>
+
+            <p class="eyebrow">A little birthday surprise</p>
+
+            <h1>
+                A Story<br>
+                Written in the <em>Stars</em>
+            </h1>
+
+            <p class="intro">
+                Sa napakaraming tao sa mundong ito,
+                may isang taong ginawang mas espesyal
+                ang mundo ko.
+                <br><br>
+                At ngayong araw, ang munting kuwentong ito
+                ay para lamang sa'yo. ♡
+            </p>
+
+            <button class="action" id="begin-button" type="button">
+                Enter My Universe ♡
+            </button>
+
+            <p class="tiny-note">made with love, just for you</p>
+
+        </section>
+
+
+        <!-- SCENE 2: BIRTHDAY QUESTION -->
+        <section id="scene-2" class="scene">
+
+            <p class="eyebrow">Chapter 01 · Isang Munting Tanong</p>
+
+            <div class="orb">🌙</div>
+
+            <h2>
+                Handa ka na ba,<br>
+                <em>birthday boy?</em>
+            </h2>
+
+            <p class="intro">
+                May inihanda akong munting sorpresa para sa'yo.
+                Pero bago ang lahat...
+            </p>
+
+            <div class="choices">
+
+                <button class="choice" data-reply="yes" type="button">
+                    Oo naman, love! ♡
+                </button>
+
+                <button class="choice" data-reply="curious" type="button">
+                    Ano kaya ito? 👀
+                </button>
+
+                <button class="choice" data-reply="shy" type="button">
+                    Kinakabahan naman ako. 🥹
+                </button>
+
+            </div>
+
+            <p id="question-reply" class="reply" aria-live="polite"></p>
+
+            <button id="continue-2" class="action hidden" type="button">
+                Sige, simulan na natin ♡
+            </button>
+
+        </section>
+
+
+        <!-- SCENE 3: LOVE STORY -->
+        <section id="scene-3" class="scene">
+
+            <p class="eyebrow">Chapter 02 · Ang Ating Kuwento</p>
+
+            <h2>
+                Kung babalikan ko<br>
+                ang <em>lahat...</em>
+            </h2>
+
+            <p class="intro">
+                May mga alaala tayong gusto kong balikan,
+                mga bagay na gusto kong sabihin,
+                at mga salitang sana ay maramdaman mo.
+            </p>
+
+            <article class="card">
+                <span class="card-icon">💌</span>
+                <h3>Ang Ating Simula</h3>
+                <p>
+                    Bawat kuwento ay may simula.
+                    At gusto kong balikan kung paano nagsimula
+                    ang sarili nating kuwento.
+                </p>
+
+                <button class="text-button" data-open="beginning" type="button">
+                    Basahin ang kuwento ↗
+                </button>
+
+                <p id="beginning-message" class="detail hidden"></p>
+            </article>
+
+            <article class="card">
+                <span class="card-icon">💗</span>
+                <h3>Mga Bagay na Mahal Ko sa'yo</h3>
+                <p>
+                    Hindi lang dahil sa mga ginagawa mo,
+                    kundi dahil sa kung sino ka.
+                </p>
+
+                <button class="text-button" data-open="reasons" type="button">
+                    Tuklasin ang mga ito ↗
+                </button>
+
+                <p id="reasons-message" class="detail hidden"></p>
+            </article>
+
+            <article class="card">
+                <span class="card-icon">✨</span>
+                <h3>Ang Hiling Ko Para sa'yo</h3>
+                <p>
+                    Kung may isang bagay akong gustong
+                    ibigay sa'yo, ito ay...
+                </p>
+
+                <button class="text-button" data-open="wish" type="button">
+                    Alamin ang hiling ko ↗
+                </button>
+
+                <p id="wish-message" class="detail hidden"></p>
+            </article>
+
+            <button class="action" data-next="4" type="button">
+                May isa pa akong sorpresa ♡
+            </button>
+
+        </section>
+
+
+        <!-- SCENE 4: PHOTO MEMORIES -->
+        <section id="scene-4" class="scene">
+
+            <p class="eyebrow">Chapter 03 · Mga Alaala</p>
+
+            <h2>
+                Ikaw, ako,<br>
+                at ang ating <em>memories.</em>
+            </h2>
+
+            <p class="intro">
+                Bawat larawan ay may kuwentong dala.
+                Pindutin mo ang mga ito para makita
+                ang munting mensahe sa bawat alaala.
+            </p>
+
+            <div id="photo-gallery" class="gallery">
+
+                <!-- Palitan natin ang placeholders ng photos ninyo. -->
+                <button class="photo" data-photo="0" type="button">
+                    <div class="photo-placeholder">♡</div>
+                    <span>Our Memory #1</span>
+                </button>
+
+                <button class="photo" data-photo="1" type="button">
+                    <div class="photo-placeholder">✧</div>
+                    <span>Our Memory #2</span>
+                </button>
+
+                <button class="photo" data-photo="2" type="button">
+                    <div class="photo-placeholder">☾</div>
+                    <span>Our Memory #3</span>
+                </button>
+
+                <button class="photo" data-photo="3" type="button">
+                    <div class="photo-placeholder">♡</div>
+                    <span>Our Memory #4</span>
+                </button>
+
+            </div>
+
+            <p id="photo-message" class="reply" aria-live="polite">
+                Pumili ng isang alaala. ♡
+            </p>
+
+            <button class="action" data-next="5" type="button">
+                Next chapter →
+            </button>
+
+        </section>
+
+
+        <!-- SCENE 5: CHOOSE YOUR ADVENTURE -->
+        <section id="scene-5" class="scene">
+
+            <p class="eyebrow">Chapter 04 · Pumili ng Sorpresa</p>
+
+            <h2>
+                Ano ang gusto mong<br>
+                <em>matuklasan?</em>
+            </h2>
+
+            <p class="intro">
+                Ikaw muna ang bahalang pumili.
+                Bawat sagot ay may munting sorpresa para sa'yo.
+            </p>
+
+            <div class="choices">
+
+                <button class="choice" data-path="letter" type="button">
+                    💌 Isang liham mula sa puso ko
+                </button>
+
+                <button class="choice" data-path="memories" type="button">
+                    📸 Balikan natin ang ating mga alaala
+                </button>
+
+                <button class="choice" data-path="dreams" type="button">
+                    ✨ Ang mga pangarap ko para sa atin
+                </button>
+
+            </div>
+
+            <article id="path-result" class="card hidden" aria-live="polite">
+                <h3 id="path-title"></h3>
+                <p id="path-text"></p>
+            </article>
+
+            <button id="continue-5" class="action hidden" type="button">
+                May huli pa akong sorpresa ♡
+            </button>
+
+        </section>
+
+
+        <!-- SCENE 6: BIRTHDAY CAKE -->
+        <section id="scene-6" class="scene">
+
+            <p class="eyebrow">Chapter 05 · A Wish for You</p>
+
+            <h2>
+                Happy Birthday,<br>
+                <em>my love!</em>
+            </h2>
+
+            <p class="intro">
+                Bago matapos ang munting kuwentong ito,
+                may hiling akong gusto kong ibulong sa mga bituin.
+            </p>
+
+            <div class="cake" aria-label="Birthday cake">
+                <div class="candles">
+                    <button class="candle" data-candle="0" type="button" aria-label="Patayin ang kandila 1">🕯️</button>
+                    <button class="candle" data-candle="1" type="button" aria-label="Patayin ang kandila 2">🕯️</button>
+                    <button class="candle" data-candle="2" type="button" aria-label="Patayin ang kandila 3">🕯️</button>
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-bottom"></div>
+            </div>
+
+            <p id="wish-status" class="reply" aria-live="polite">
+                Pindutin ang bawat kandila at mag-wish ka. ✨
+            </p>
+
+            <button id="make-wish" class="action" type="button">
+                Make a Wish ✨
+            </button>
+
+            <button id="continue-6" class="action hidden" type="button">
+                Open your final surprise ♡
+            </button>
+
+        </section>
+
+
+        <!-- SCENE 7: SECRET LETTER -->
+        <section id="scene-7" class="scene">
+
+            <p class="eyebrow">Final Chapter · Just for You</p>
+
+            <div class="orb">💌</div>
+
+            <h2>
+                May huli pa akong<br>
+                <em>lihim.</em>
+            </h2>
+
+            <p class="intro">
+                May isang munting liham na para lamang sa'yo.
+                Pero kailangan mo munang malaman ang secret word.
+            </p>
+
+            <form id="secret-form" class="secret-form">
+
+                <label for="secret-answer">
+                    Ano ang ating secret word?
+                </label>
+
+                <input
+                    id="secret-answer"
+                    type="password"
+                    placeholder="Ilagay ang secret word..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button class="action" type="submit">
+                    Buksan ang liham ♡
+                </button>
+
+            </form>
+
+            <p id="secret-feedback" class="reply" aria-live="polite"></p>
+
+            <article id="final-letter" class="letter hidden">
+                <div class="letter-heart">♡</div>
+
+                <h2>Para sa'yo, <em>mahal ko.</em></h2>
+
+                <p>
+                    Maligayang kaarawan sa isa sa pinakamahalagang
+                    tao sa buhay ko.
+                </p>
+
+                <p>
+                    Sana sa panibagong taon ng buhay mo,
+                    mas marami ka pang pangarap na matupad,
+                    mas marami kang dahilan para ngumiti,
+                    at mas marami kang araw na maramdaman
+                    kung gaano ka kahalaga.
+                </p>
+
+                <p>
+                    Hindi man perpekto ang lahat,
+                    sana ay patuloy tayong gumawa ng mga alaalang
+                    babalikan natin nang may ngiti.
+                </p>
+
+                <p>
+                    Salamat sa pagiging ikaw.
+                    At kung may isang bagay akong gustong
+                    ipaalala sa'yo ngayong araw,
+                    iyon ay ang katotohanang mahalaga ka,
+                    minamahal ka, at karapat-dapat ka sa
+                    lahat ng magagandang bagay sa mundo.
+                </p>
+
+                <h3>Maligayang kaarawan, mahal ko. ♡</h3>
+
+                <p class="signature">
+                    With all my love,<br>
+                    <em>Your favorite person ♡</em>
+                </p>
+            </article>
+
+            <button id="restart-button" class="action secondary hidden" type="button">
+                Balikan ang ating kuwento ↻
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with love, under the same stars. ♡</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+              </html>
